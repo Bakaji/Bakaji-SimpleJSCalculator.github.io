@@ -1,0 +1,110 @@
+* {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  outline: 0;
+  font-size: 20px;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif
+}
+
+.container {
+  height: 100vh;
+  width: 100vw;
+  background: linear-gradient(0.4turn, #26c6bc, #aa71a6);
+}
+#calculator {
+  height: 400px;
+  width: 300px;
+  min-width: 220px;
+  border-radius: 10px;
+  background-color: aliceblue;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+#screen {
+  background-color: #232133;
+  color: black;
+  height: 70px;
+  border-top-right-radius: 10px;
+  border-top-left-radius: 10px;
+  box-sizing: border-box;
+  padding: 15px;
+  direction: rtl;
+}
+
+#screen input {
+  height: 100%;
+  width: 100%;
+  background-color: transparent;
+  color: white;
+}
+
+#operations {
+  height: 50px;
+  background-color: #dadada;
+}
+#operations div {
+  float: left;
+  width: 25%;
+  height: 100%;
+  display: block;
+  text-align: center;
+  line-height: 50px;
+  color: #232133;
+  cursor: pointer;
+}
+#operations div:active{
+    background-color: #aaa;
+}
+#numbers_equal {
+  height: calc(100% - 120px);
+}
+#numbers_equal > div {
+  display: inline-block;
+}
+#numbers {
+  width: 75%;
+  height: 100%;
+}
+#numbers div{
+    display: inline-block;
+    width: 31%;
+    height: 23%;
+    cursor: pointer;
+}
+#numbers div span{
+    pointer-events: none;
+}
+#numbers div:hover{
+    background-color: #26c6bc;
+}
+#equal {
+  width: 23%;
+  float: right;
+  height: 100%;
+  background-color: red;
+  color: white;
+  position: relative;
+  border-bottom-right-radius: 10px;
+  cursor: pointer;
+}
+#equal span{
+    pointer-events: none
+}
+.relative{
+    position: relative;
+}
+.absolute-centered {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+@media screen and (max-width:300px){
+  #calculator{
+    width: 100%;
+  }
+}
